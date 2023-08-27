@@ -3,9 +3,7 @@ import cors from "cors"
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv"
 import dayjs from "dayjs";
-import joi from "joi";
-import bcrypt from 'bcrypt';
-import router from "../routes/indexRouter";
+import router from "../routes/indexRouter.js";
 
 const app = express();
 app.use(express.json());
