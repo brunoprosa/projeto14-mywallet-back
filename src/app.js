@@ -2,13 +2,12 @@ import express from "express";
 import cors from "cors"
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv"
-import dayjs from "dayjs";
-import router from "../routes/indexRouter.js";
+import router from "./routes/indexRouter.js";
 
+dotenv.config()
 const app = express();
 app.use(express.json());
 app.use(cors());
-dotenv.config()
 
 const mongoClient = new MongoClient(process.env.DATABASE_URL);
 export let db;
